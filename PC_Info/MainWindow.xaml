@@ -1,0 +1,53 @@
+﻿<Window x:Class="PC_Info.MainWindow"
+        WindowStartupLocation="CenterScreen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PC_Info"
+        mc:Ignorable="d"
+        Title="HW_Info" Icon="pc_ico.ico" Height="240" Width="425" ResizeMode="CanMinimize" Background="White" Foreground="{x:Null}" KeyDown="Window_KeyDown">
+    <Grid Margin="10">
+        <Grid.Background>
+            <ImageBrush/>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="60*"/>
+            <ColumnDefinition Width="277*"/>
+            <ColumnDefinition Width="60*"/>
+        </Grid.ColumnDefinitions>
+        <Label Name="UserLabel" Content="User:" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Height="26" FontWeight="Bold" Width="39"/>
+        <Label Name="OSLabel" Content="OS:" HorizontalAlignment="Left" Margin="10,25,0,0" VerticalAlignment="Top" Height="26" FontWeight="Bold" Width="39"/>
+        <Label Name="CPULabel" Content="CPU:" HorizontalAlignment="Left" Margin="10,50,0,0" VerticalAlignment="Top" Height="26" FontWeight="Bold" Width="37"/>
+        <Label Name="GPULabel" Content="GPU:" HorizontalAlignment="Left" Margin="10,75,0,0" VerticalAlignment="Top" Height="26" FontWeight="Bold" Width="38"/>
+        <Label Name="RAMLabel" Content="RAM:" HorizontalAlignment="Left" Margin="10,100,0,0" VerticalAlignment="Top" Height="26" FontWeight="Bold" Width="41"/>
+        <Label Name="MBLabel" Content="MB:" HorizontalAlignment="Left" Margin="10,125,0,0" VerticalAlignment="Top" Height="26" FontWeight="Bold" Width="41"/>
+
+        <Label Name="UserLabelC" Content="Unknown" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Grid.Column="1" Grid.ColumnSpan="2" Height="26" Cursor="Hand" MouseDown="Item_Click"/>
+        <Label Name="OSLabelC" Content="Unknown" HorizontalAlignment="Left" Margin="0,25,0,0" VerticalAlignment="Top" Grid.Column="1" Grid.ColumnSpan="2" Height="26" Cursor="Hand" MouseDown="Item_Click"/>
+        <Label Name="CPULabelC" Content="Unknown" HorizontalAlignment="Left" Margin="0,50,0,0" VerticalAlignment="Top" Grid.Column="1" Grid.ColumnSpan="2" Height="26" Cursor="Hand" MouseDown="Item_Click"/>
+        <Label Name="GPULabelC" Content="Unknown" HorizontalAlignment="Left" Margin="0,75,0,0" VerticalAlignment="Top" Grid.Column="1" Grid.ColumnSpan="2" Height="26" Cursor="Hand" MouseDown="Item_Click"/>
+        <Label Name="RAMLabelC" Content="Unknown" HorizontalAlignment="Left" Margin="0,100,0,0" VerticalAlignment="Top" Grid.Column="1" Grid.ColumnSpan="2" Height="26" Cursor="Hand" MouseDown="Item_Click"/>
+        <Label Name="MBLabelC" Content="Unknown" HorizontalAlignment="Left" Margin="0,125,0,0" VerticalAlignment="Top" Grid.Column="1" Grid.ColumnSpan="2" Height="26" Cursor="Hand" MouseDown="Item_Click"/>
+
+        <Button Content="OK" Margin="93,161,94,0" VerticalAlignment="Top" Click="Button_Click" Grid.Column="1" Height="20"/>
+
+        <Rectangle Name="SaveDesktop" Grid.Column="2" HorizontalAlignment="Left" Height="20" Width="20" Margin="40,0,0,0" VerticalAlignment="Top" MouseDown="SaveDesktop_MouseDown" Cursor="Hand" ToolTip="Save to desktop">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="save.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle Name="SaveClipboard" Grid.Column="2" HorizontalAlignment="Left" Height="20" Width="20" Margin="15,0,0,0" VerticalAlignment="Top" Cursor="Hand" ToolTip="Save to clipboard" MouseDown="SaveClipboard_MouseDown">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="Clipboard.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+        <Rectangle Name="Help" Grid.Column="2" HorizontalAlignment="Left" Height="15" Width="15" Margin="44,163,0,0" VerticalAlignment="Top" Cursor="Hand">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="help.png"/>
+            </Rectangle.Fill>
+        </Rectangle>
+    </Grid>
+</Window>
